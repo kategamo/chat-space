@@ -26,7 +26,6 @@ belongs_to :group
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
-|user_id|integer|null: faulse foreign_key: true|
 
 ## association
 has_many :users
