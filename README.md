@@ -3,7 +3,7 @@
 # users table
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: faulse|
+|name|string|null: false|
 ## association
 has_many :messages
 has_many :groups
