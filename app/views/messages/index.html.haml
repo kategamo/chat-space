@@ -1,0 +1,35 @@
+.navibar
+  %p New Group was successfuly created!
+.left
+  .left__header
+    .left__header__user
+      %p Kate Gamo
+    .left__header__icon
+      %i.fa.fa-pencil-square-o{"aria-hidden" => "true"}
+      %i.fa.fa-cog{"aria-hidden" => "true"}
+  .left__sample
+    .left__sample__text
+      .p1 sample
+      .p2 This is sample message.
+  .left__sample2
+    .left__sample2__text2
+      .p1 sample 2
+      .p2 This is second sample message.
+.right
+  .group
+    .name Group Name
+    .status Members: Kate Gamo
+    %button#1{ :class =>"button_1", :placeholder => "edit", :type =>"edit"} edit
+  .chat
+    .chatsample1
+      .p1 Member1
+      .p2 sample text...1
+    .chatsample2
+      .p1 Member2
+      .p2 sample text...2
+  .type
+    %input#type{ :class =>"input_type", :placeholder => "Type a message", :type => "text"}/
+    %i.fa.fa-picture-o{"aria-hidden" => "true"}
+    %button#type2{ :class =>"button_type2", :placeholder => "send", :type =>"sent"} send
+
+
