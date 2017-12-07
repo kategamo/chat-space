@@ -6,7 +6,7 @@
 |name|string|null: false|
 ## association
 has_many :messages
-has_many :groups, through:member
+has_many :groups, through:members
 add_index :users, :name
 add_index :users, :email, unique:true
 
