@@ -5,7 +5,7 @@
 |------|----|-------|
 |name|string|null: false|
 ## association
-has_many :messages
+has_many :through members :messages
 has_many :groups
 add_index :users, :name
 add_index :users, :email, unique:true
@@ -41,4 +41,5 @@ has_many :messages
 ## Association
 belongs_to :group
 belongs_to :user
+has_many :messages
 

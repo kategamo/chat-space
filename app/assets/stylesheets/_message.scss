@@ -3,10 +3,14 @@ html,body{
   font-family: sans-serif;
 }
 
-$base_color:#FFDEAD;
-$leftheader_color:#FAEBD7;
+$base:#FFDEAD;
+$leftheader:#FAEBD7;
+$flush:#F08080;
+$left:#E9967A;
+$main:#e7d8ca;
+//*--------------------flush messages---------------*//
 .navibar{
-  background-color:#F08080;
+  background-color:$flush;
   width:100%;
   height:20px;
   text-align: center;
@@ -15,13 +19,13 @@ $leftheader_color:#FAEBD7;
 }
 // *----------------------sidebar--------------------*//
 .left{
-  background-color:#E9967A;
+  background-color:$left;
   width:300px;
   height:700px;
   float:left;
 
   &__header{
-  background-color:$leftheader_color;
+  background-color:$leftheader;
   width:300px;
   height:100px;
   font-size:16px;
@@ -44,7 +48,7 @@ $leftheader_color:#FAEBD7;
   }
 
   &__sample{
-  background-color:#e7d8ca;
+  background-color:$main;
   width:100%;
   height:100px;
   clear:both;
@@ -67,7 +71,7 @@ $leftheader_color:#FAEBD7;
 
 
   &__sample2{
-  background-color:$leftheader_color;
+  background-color:$leftheader;
   width:100%;
   height:100px;
   clear:both;
@@ -92,7 +96,7 @@ $leftheader_color:#FAEBD7;
 //-------------------Group Messages------------------//
 .right{
   float:right;
-  background-color:$base_color;
+  background-color:$base;
   width:calc(100% - 300px);
   height:700px;
   position:relative;
@@ -157,7 +161,7 @@ $leftheader_color:#FAEBD7;
     }
   }
   .type{
-  background-color:$leftheader_color;
+  background-color:$leftheader;
   width:100%;
   max-height:100px;
   position:absolute;
@@ -178,7 +182,7 @@ $leftheader_color:#FAEBD7;
     margin:10px 0px 0px 0px;
     }
     .button_type2{
-    background-color: #F08080;
+    background-color:$flush;
     color:white;
     height:50px;
     width:80px;
