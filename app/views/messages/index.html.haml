@@ -1,12 +1,11 @@
-.navibar
-  %p New Group was successfuly created!
 .left
   .left__header
     .left__header__user
-      %p Kate Gamo
+      = current_user.name
     .left__header__icon
       %i.fa.fa-pencil-square-o{"aria-hidden" => "true"}
-      %i.fa.fa-cog{"aria-hidden" => "true"}
+      = link_to edit_user_path(current_user.id), class: 'post' do
+        %i.fa.fa-cog
   .left__sample
     .left__sample__text
       .p1 sample
