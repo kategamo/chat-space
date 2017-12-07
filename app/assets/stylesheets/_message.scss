@@ -1,3 +1,8 @@
+html,body{
+  height:100vh;
+  font-family: sans-serif;
+}
+
 $base_color:#FFDEAD;
 $leftheader_color:#FAEBD7;
 .navibar{
@@ -13,18 +18,18 @@ $leftheader_color:#FAEBD7;
   background-color:#E9967A;
   width:300px;
   height:700px;
-  float: left;
+  float:left;
 
   &__header{
   background-color:$leftheader_color;
   width:300px;
   height:100px;
   font-size:16px;
-  float: left;
+  float:left;
     &__user{
-    margin-left: 20px;
+    margin-left:20px;
     padding-top:20px;
-    float: left;
+    float:left;
     width:100px;
     height:50px;
     }
@@ -42,20 +47,20 @@ $leftheader_color:#FAEBD7;
   background-color:#e7d8ca;
   width:100%;
   height:100px;
-  clear: both;
+  clear:both;
     &__text{
-    margin-left: 20px;
+    margin-left:20px;
     padding-top:20px;
-    float: left;
+    float:left;
     width:200px;
     height:50px;
       .p1{
       font-size:15px;
-      margin-bottom: 5px;
+      margin-bottom:5px;
       }
       .p2{
       font-size:11px;
-      margin-bottom: 40px;
+      margin-bottom:40px;
       }
     }
   }
@@ -67,18 +72,18 @@ $leftheader_color:#FAEBD7;
   height:100px;
   clear:both;
     &__text2{
-    margin-left: 20px;
+    margin-left:20px;
     padding-top:20px;
-    float: left;
+    float:left;
     width:200px;
     height:50px;
       .p1{
       font-size:15px;
-      margin-bottom: 5px;
+      margin-bottom:5px;
       }
       .p2{
       font-size:11px;
-      margin-bottom: 40px;
+      margin-bottom:40px;
       }
     }
   }
@@ -90,63 +95,63 @@ $leftheader_color:#FAEBD7;
   background-color:$base_color;
   width:calc(100% - 300px);
   height:700px;
-  position: relative;
+  position:relative;
   .group{
   background-color:#E9967A;
   height:100px;
     .name{
-    float: left;
-    font-size: 20px;
-    margin-top: 20px;
+    float:left;
+    font-size:20px;
+    margin-top:20px;
     padding-left:15px;
     }
     .status{
     clear:both;
-    float: left;
-    font-size: 10px;
-    padding-top: 15px;
+    float:left;
+    font-size:10px;
+    padding-top:15px;
     padding-left:15px;
     }
     .button_1{
-    float: right;
+    float:right;
     background-color: white;
     color:#F08080;
     width:60px;
     height:40px;
     padding-left:20px;
     padding-right:20px;
-    margin: 0px 30px 0px 0px;
-    border-radius: 5%;
-    box-shadow: none;
-    text-align: center;
+    margin:0px 30px 0px 0px;
+    border-radius:5%;
+    box-shadow:none;
+    text-align:center;
     border-color:#F08080;
     }
   }
   .chat{
-  float: left;
+  float:left;
     .chatsample1{
-    height: 100px;
+    height:100px;
       .p1{
-      font-size: 20px;
-      margin-top: 20px;
+      font-size:20px;
+      margin-top:20px;
       padding-left:15px;
       }
       .p2{
-      font-size: 10px;
-      padding-top: 15px;
+      font-size:10px;
+      padding-top:15px;
       padding-left:15px;
       }
     }
     .chatsample2{
-    height: 100px;
+    height:100px;
       .p1{
-      font-size: 20px;
-      margin-top: 20px;
+      font-size:20px;
+      margin-top:20px;
       padding-left:15px;
       }
       .p2{
-      font-size: 10px;
-      padding-top: 15px;
+      font-size:10px;
+      padding-top:15px;
       padding-left:15px;
       }
     }
@@ -155,22 +160,22 @@ $leftheader_color:#FAEBD7;
   background-color:$leftheader_color;
   width:100%;
   max-height:100px;
-  position: absolute;
+  position:absolute;
   bottom:0;
     .input_type{
     background-color: white;
     width:900px;
     height:50px;
-    margin: 10px 0px 10px 10px;
+    margin:10px 0px 10px 10px;
     }
     .fa.fa-picture-o{
     text-align:center;
-    padding-top: 15px;
+    padding-top:15px;
     background-color: white;
     height:40px;
     width:30px;
-    font-size: 20px;
-    margin: 10px 0px 0px 0px;
+    font-size:20px;
+    margin:10px 0px 0px 0px;
     }
     .button_type2{
     background-color: #F08080;
@@ -178,11 +183,11 @@ $leftheader_color:#FAEBD7;
     height:50px;
     width:80px;
     text-align: center;
-    float: right;
-    margin: 10px 30px 0px 10px;
-    border-radius: 5%;
-    box-shadow: none;
-    font-size: 20px;
+    float:right;
+    margin:10px 30px 0px 10px;
+    border-radius:5%;
+    box-shadow:none;
+    font-size:20px;
     }
   }
 }
