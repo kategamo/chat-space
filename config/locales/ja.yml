@@ -1,7 +1,6 @@
----
 ja:
+  errors: "エラー"
   activerecord:
-    errors:
       messages:
         record_invalid: "バリデーションに失敗しました: %{errors}"
         restrict_dependent_destroy:
