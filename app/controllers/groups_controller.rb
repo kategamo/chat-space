@@ -1,5 +1,4 @@
 class GroupsController < ApplicationController
-  before_action :group_find
 
   def index
   end
@@ -9,6 +8,7 @@ class GroupsController < ApplicationController
   end
 
   def create
+    group_find
     @group = Group.new(group_params)
     if @group.save
       redirect_to new_group_message_path(@group) , notice: '新しいグループが作成されました'
@@ -18,7 +18,6 @@ class GroupsController < ApplicationController
   end
 
   def edit
-    group_find
   end
 
   def update

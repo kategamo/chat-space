@@ -5,6 +5,14 @@ class MessagesController < ApplicationController
     @group= Group.find(params[:group_id])
   end
 
+  def create
+    @message =Message.new(message_params)
+      if @message.save
+    else
+      render :new , alert: '新しいメッセージを作成してください'
+     end
+  end
+
 private
   def set_message
     @message = Message.find(params[:id])
