@@ -1,16 +1,18 @@
 .chat-group-form
   %h1 チャットグループ編集
   =form_for @group do |g|
-    .chat-group-form__errors
+    #error_explanation
       %h2
-        1件のエラーが発生しました。
-        %ul
-          %li エラーです
+        =@group.errors.count
+        件のエラーがあります。
+      %ul
+      - @group.errors.full_messages.each do |msg|
+        %li= msg
     .chat-group-form__field.clearfix
       .chat-group-form__field--left
         =g.label "グループ名",for: "chat_group_name", class: "chat-group-form__label"
       .chat-group-form__field--right
-        =g.text_field :name, name:"group[name]", placeholder: "グループ名を入力してください", type: "text", value:""
+        =g.text_field :name, name:"group[name]", placeholder: "グループ名を入力してください", type: "text"
     .chat-group-form__field.clearfix
       / この部分はインクリメンタルサーチ（ユーザー追加の非同期化のときに使用します
       /
