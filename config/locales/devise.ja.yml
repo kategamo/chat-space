@@ -9,6 +9,7 @@ ja:
 #      not_locked: "was not locked"
       not_saved: "登録してください"
       already_authenticated: "登録情報を更新しました"
+      failure.user.not_found_in_database: "ユーザーが見つかりません"
 
   devise:
     failure:
@@ -63,4 +64,5 @@ ja:
       unlock_instructions:
         subject: 'アカウントの凍結解除'
 #        subject: 'Unlock Instructions'
+      failure.user.not_found_in_database: 'ユーザーが見つかりません'
 
