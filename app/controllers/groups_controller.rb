@@ -17,11 +17,11 @@ class GroupsController < ApplicationController
   end
 
   def edit
-    @group = Group.find(params[:id])
+    set_group
   end
 
   def update
-    @group = Group.find(params[:id])
+    set_group
     if @group.update(group_params)
     redirect_to new_group_message_path(@group.id)
     else
@@ -30,6 +30,9 @@ class GroupsController < ApplicationController
   end
 
 private
+  def set_group
+    @group = Group.find(params[:id])
+  end
 
   def group_params
     params.require(:group).permit(
