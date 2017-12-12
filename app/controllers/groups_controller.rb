@@ -1,4 +1,5 @@
 class GroupsController < ApplicationController
+  before_action :group_find
 
   def index
   end
@@ -17,11 +18,11 @@ class GroupsController < ApplicationController
   end
 
   def edit
-    set_group
+    group_find
   end
 
   def update
-    set_group
+    group_find
     if @group.update(group_params)
     redirect_to new_group_message_path(@group.id)
     else
@@ -30,7 +31,7 @@ class GroupsController < ApplicationController
   end
 
 private
-  def set_group
+  def group_find
     @group = Group.find(params[:id])
   end
 
