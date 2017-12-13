@@ -6,10 +6,17 @@
       = @group.name
       = link_to edit_group_path(@group.id), class: 'get' do
         %button#1{ :class =>"button_1", :placeholder => "edit", :type =>"edit"} edit
+  .chat
+    -@group.messages.each do |message|
+      .chatsample1
+        =message.body
+      = image_tag message.image.url if message.image.present?
+      / carriwwave image upload, user can send either image or message only
+
   .type
     = form_for [@group, @message] do |f|
       = f.text_field :body
       %label
-        = f.file_field :image
+        = f.file_field :image, label:false
         %i.fa.fa-picture-o{"aria-hidden" => "true"}
       = f.submit "send" , class: "button_type2"
