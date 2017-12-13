@@ -17,4 +17,7 @@
 /yarn-error.log
 
 .byebug_history
- Uploaders/image_uploader.rb
+
+# Ignore user posted image
+/public/
+
