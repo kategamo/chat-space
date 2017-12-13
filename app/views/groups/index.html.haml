@@ -11,5 +11,5 @@
     .left__sample
       .left__sample__text
         .p1
-          = link_to new_group_message_path(e.id),class: 'post' do
+          = link_to group_messages_path(e.id),class: 'post' do
             = e.name
