@@ -13,3 +13,8 @@
         .p1
           = link_to group_messages_path(e.id),class: 'post' do
             = e.name
+        / .p2
+        /   = link_to group_messages_path(e.id),class: 'post' do
+        /     =if @message.body
+        /       elsif'画像が投稿されています'
+        /       else 'まだメッセージはありません'

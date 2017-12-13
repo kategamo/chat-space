@@ -1,5 +1,5 @@
 class GroupsController < ApplicationController
-before_action :group_find, only:[:edit,:update]
+  before_action :group_find, only:[:edit,:update]
 
   def index
   end
@@ -18,11 +18,9 @@ before_action :group_find, only:[:edit,:update]
   end
 
   def edit
-    group_find
   end
 
   def update
-    group_find
     if @group.update(group_params)
     redirect_to group_messages_path(@group.id)
     else
