@@ -1,0 +1,171 @@
+html,body{
+  height:100vh;
+  font-family: monospace;
+  color:#708090;
+}
+
+$base:#FFDEAD;
+$leftheader:#FAEBD7;
+$flush:#F08080;
+$left:#FFB591;
+$main:#e7d8ca;
+$letter:#708090;
+
+// *----------------------sidebar--------------------*//
+
+.left{
+  background-color:$left;
+  width:300px;
+  height:800px;
+  float:left;
+
+  &__header{
+  width:300px;
+  height:120px;
+  font-size:16px;
+  float:left;
+  text-decoration: none;
+
+
+    &__user{
+    margin-top:20px;
+    margin-left:20px;
+    padding-top:20px;
+    float:left;
+    width:100px;
+    height:50px;
+    }
+    &__icon{
+    margin-top:20px;
+    margin-left:20px;
+    padding-top:20px;
+    float:left;
+    float:right;
+    width:100px;
+    height:50px;
+     .post{text-decoration: none;
+          color:$letter;}
+     .get{text-decoration: none;
+          color:$letter;}
+    }
+  }
+  &__sample{
+  width:100%;
+  height:100px;
+  float:left;
+  padding-top:20px;
+  padding-left:20px;
+  opacity: 0.7;
+  background-color:50%;
+    .post{
+    text-decoration:none;
+    color:$letter;
+    font-size:15px;
+    }
+    &__p2{
+    font-size:5px;
+    }
+  }
+}
+
+//-------------------Group Messages------------------//
+.right{
+  float:right;
+  background-color:$base;
+  width:calc(100% - 300px);
+  height:800px;
+  position: relative;
+  .group{
+  background-color:$leftheader;
+  height:120px;
+  position:relative;
+    .name{
+    float:left;
+    font-size:15px;
+    margin: 40px 30px 30px 30px;
+    }
+    .button_1{
+    float:right;
+    margin-left:700px;
+    background-color: white;
+    color:#F08080;
+    width:70px;
+    height:50px;
+    padding-left:20px;
+    padding-right:20px;
+    border-radius:5%;
+    box-shadow:none;
+    text-align:center;
+    border-color:#F08080;
+    }
+    .member{
+    height:15px;
+    font-size:10px;
+    float:left;
+    }
+  }
+  .chat{
+  float:left;
+  overflow: scroll;
+  height:600px;
+  width:100%;
+    .chatsample1{
+      height:110px;
+      width:100%;
+      font-size:10px;
+      .chat_user{
+    font-size:15px;
+    padding-left:30px;
+    padding-top: 10px;
+    font-weight:900;
+    }
+      .chat_message{
+    font-size:10px;
+    padding-left:30px;
+    padding-top: 10px;
+        img{
+          height:70px;
+          width:90px;
+        }
+      }
+      }
+  }
+  .type{
+  background-color:$leftheader;
+  width:100%;
+  max-height:100px;
+  position:absolute;
+  bottom:0;
+    #message_body{
+    height:50px;
+    width:620px;
+    margin-left:30px;
+    padding-left:10px;
+    border:none;
+    }
+    #message_image{
+    visibility:hidden;
+    width:0px;
+    }
+    .fa.fa-picture-o{
+    text-align:center;
+    padding-top:15px;
+    background-color: white;
+    height:40px;
+    width:30px;
+    font-size:20px;
+    margin:10px 10px 10px 0px;
+    }
+    .button_type2{
+    background-color:$flush;
+    color:white;
+    height:50px;
+    width:80px;
+    text-align:center;
+    float:right;
+    margin:10px 30px 0px 10px;
+    border-radius:5%;
+    box-shadow:none;
+    }
+  }
+}
