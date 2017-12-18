@@ -12,10 +12,11 @@ class MessagesController < ApplicationController
   def create
     @message=Message.new(message_params)
       if @message.save
-        redirect_to group_messages_path(@group),notice: '新しいメッセージが投稿されました'
+        redirect_to group_messages_path(@group), notice: '新しいメッセージが投稿されました'
         # @groupがgroup_idを持っているため引数は@group
     else
-      render :new , alert: '新しいメッセージを作成してください'
+      flash.now[:alert] = '新しいメッセージを作成してください'
+      render :index
      end
   end
 
