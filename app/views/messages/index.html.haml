@@ -6,10 +6,10 @@
       = @group.name
       = link_to edit_group_path(@group.id), class: 'get' do
         %button#1{ :class =>"button_1", :placeholder => "edit", :type =>"edit"} edit
-      .member
-        Members:
-        -@group.users.each do |user|
-          = user.name
+    .member
+      Members:
+      -@group.users.each do |user|
+        = user.name
 
   .chat
     -@group.messages.each do |message|

@@ -39,25 +39,35 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+  gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+  gem 'erb2haml'
+  gem 'haml-rails'
+  # gem 'jquery-rails'
+  gem 'font-awesome-rails'
+  gem 'devise'
+  gem 'pry-rails'
+  gem 'rails-i18n'
+  gem 'carrierwave'
+  gem 'mini_magick'
+  gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+  gem 'erb2haml'
+  gem 'haml-rails'
+  gem 'jquery-rails'
+  gem 'listen', '>= 3.0.5', '< 3.2'
+  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+  gem 'spring'
+  gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'rspec'
+  gem 'rspec-rails'
+  gem 'factory_girl_rails', "~> 4.4.1"
+  gem 'faker'
+  gem 'rails-controller-testing'
 end
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'
-  gem 'listen', '>= 3.0.5', '< 3.2'
-  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'spring'
-  gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
-# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-gem 'erb2haml'
-gem 'haml-rails'
-# gem 'jquery-rails'
-gem 'font-awesome-rails'
-gem 'devise'
-gem 'pry-rails'
-gem 'rails-i18n'
-gem 'carrierwave'
-gem 'mini_magick'
+
+

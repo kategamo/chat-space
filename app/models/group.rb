@@ -1,5 +1,4 @@
 class Group < ApplicationRecord
-validate :add_error_sample
 validates :name, presence: true
 has_many :members
 has_many :users, through: :members
