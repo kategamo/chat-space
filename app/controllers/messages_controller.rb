@@ -2,7 +2,7 @@ class MessagesController < ApplicationController
   before_action :set_group, only: [:index,:new,:create]
 
   def index
-    @message = @group.messages.new
+    @message = Message.new
   end
 
   def new
@@ -12,12 +12,16 @@ class MessagesController < ApplicationController
   def create
     @message=Message.new(message_params)
       if @message.save
-        redirect_to group_messages_path(@group),notice: '新しいメッセージが投稿されました'
+      #   redirect_to group_messages_path(@group),notice: '新しいメッセージが投稿されました'
         # @groupがgroup_idを持っているため引数は@group
-    else
-      render :new , alert: '新しいメッセージを作成してください'
+        respond_to do |format|
+          format.html{redirect_to group_messages_path(@group)}
+          format.json
      end
+   else
+    render :index
   end
+end
 
 private
   def set_message
