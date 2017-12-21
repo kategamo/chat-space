@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users
    root 'groups#index'
-   resources:users
+   resources:users, only:[:index, :edit, :update]
    resources:members
    resources:groups, only: [:index,:new, :edit, :update, :create]do
    resources:messages, only: [:index,:new, :edit, :update, :create]
  end
+  get 'search' => 'users#search'
 end
