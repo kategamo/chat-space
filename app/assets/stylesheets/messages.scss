@@ -75,12 +75,22 @@ $letter:#708090;
   width:calc(100% - 300px);
   height:800px;
   position: relative;
-  .group{
+  &__group{
   background-color:$leftheader;
-  height:120px;
+  height:100px;
+  padding:20px;
   position:relative;
     .name{
+
+    float:left;
+    height:30px;
+    width:30px;
     font-size:15px;
+    }
+     .member{
+    height:15px;
+    width:50px;
+    font-size:10px;
     }
     .button_1{
     margin-left:700px;
@@ -95,27 +105,30 @@ $letter:#708090;
     text-align:center;
     border-color:#F08080;
     }
+
     .member{
     height:15px;
     font-size:10px;
     }
+
   }
-  .chat{
+  &__chat{
   float:left;
   overflow: scroll;
   height:600px;
   width:100%;
-    .chatsample1{
+  padding-left:20px;
+    &__chatsample1{
       height:110px;
       width:100%;
       font-size:10px;
-      .chat_user{
+    &__user{
     font-size:15px;
-    padding-left:30px;
+    padding-left:15px;
     padding-top: 10px;
     font-weight:900;
     }
-      .chat_message{
+    &__message{
     font-size:10px;
     padding-left:30px;
     padding-top: 10px;
@@ -124,9 +137,9 @@ $letter:#708090;
           width:90px;
         }
       }
-      }
+    }
   }
-  .type{
+  &__type{
   background-color:$leftheader;
   width:100%;
   max-height:100px;

@@ -1,30 +1,33 @@
 .left
   = render :template => "groups/index"
 .right
-  .group
-    .name
+  .right__group
+    .right__group__name
       = @group.name
       = link_to edit_group_path(@group.id), class: 'get' do
         %button#1{ :class =>"button_1", :placeholder => "edit", :type =>"edit"} edit
-    .member
-      Members:
-      -@group.users.each do |user|
-        = user.name
 
-  .chat
+      .right__group__member
+        Members:
+        -@group.users.each do |user|
+          = user.name
+
+
+  .right__chat
     -@group.messages.each do |message|
-      .chatsample1
-        .chat_user
-          =current_user.name
+      .right__chat__chatsample1
+        .right__chat__chatsample1__user
+          =message.user.name
           =message.created_at
-        .chat_message
+        .right__chat__chatsample1__message
           =message.body
           =image_tag message.image.url if message.image.present?
       / carriwwave image upload, user can send either image or message only
-  .type
+  .right__empty
+  .right__type
     = form_for [@group, @message] do |f|
-      = f.text_field :body, placeholder:"Type a message"
+      = f.text_field :body, class: 'bodybox', placeholder:"Type a message"
       %label
-        = f.file_field :image, label:false
+        = f.file_field :image, label:false, id:"message_image"
         %i.fa.fa-picture-o{"aria-hidden" => "true"}
       = f.submit "send" , class: "button_type2"
