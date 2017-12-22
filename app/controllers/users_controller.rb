@@ -1,10 +1,21 @@
 class UsersController < ApplicationController
+<<<<<<< HEAD
+  before_action :authenticate_user!,　only: [:search]
+
+  def index
+   @users = User.order('id ASC')
+  end
+
+=======
   # before_action :authenticate_user!
   # before_action :user_find
+>>>>>>> origin/ajax
   def show
+    @user = User.find(params[:id])
   end
 
   def edit
+    @user = User.find(user_params)
   end
 
   def update
@@ -16,18 +27,19 @@ class UsersController < ApplicationController
     end
   end
 
-  private
+  def search
+      @user = User.where('name LIKE(?)', "#{params[:keyword]}%")
+     respond_to do |format|
+       format.html
+       format.json
+    end
+  end
 
+  private
   def user_params
     params.require(:user).permit(
       :name,
       :email,
     )
   end
-
-  def user_find
-    @user = User.find(params[:id])
-  end
-
-
 end
