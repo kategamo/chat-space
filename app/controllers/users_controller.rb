@@ -1,21 +1,17 @@
 class UsersController < ApplicationController
-<<<<<<< HEAD
+
   before_action :authenticate_user!,　only: [:search]
 
   def index
    @users = User.order('id ASC')
   end
 
-=======
-  # before_action :authenticate_user!
-  # before_action :user_find
->>>>>>> origin/ajax
   def show
     @user = User.find(params[:id])
   end
 
   def edit
-    @user = User.find(user_params)
+    @user = User.find(params[:id])
   end
 
   def update
@@ -37,6 +33,7 @@ class UsersController < ApplicationController
 
   private
   def user_params
+    binding.pry
     params.require(:user).permit(
       :name,
       :email,

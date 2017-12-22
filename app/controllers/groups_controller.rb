@@ -1,5 +1,5 @@
 class GroupsController < ApplicationController
-  # before_action :group_find, only:[:edit,:update]
+  before_action :group_find, only:[:edit,:update]
 
   def index
   end
@@ -18,6 +18,7 @@ class GroupsController < ApplicationController
   end
 
   def edit
+    @group = Group.find(params[:id])
   end
 
   def update
