@@ -1,10 +1,15 @@
 class UsersController < ApplicationController
+<<<<<<< HEAD
   before_action :authenticate_user!,　only: [:search]
 
   def index
    @users = User.order('id ASC')
   end
 
+=======
+  # before_action :authenticate_user!
+  # before_action :user_find
+>>>>>>> origin/ajax
   def show
     @user = User.find(params[:id])
   end

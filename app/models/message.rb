@@ -1,5 +1,7 @@
 class Message < ApplicationRecord
+
 validates :message_cannot_be_empty, presence: true
+
 belongs_to :user
 belongs_to :group
 mount_uploader :image, ImageUploader

@@ -12,11 +12,13 @@ class MessagesController < ApplicationController
   def create
     @message=Message.new(message_params)
       if @message.save
+
       #   redirect_to group_messages_path(@group),notice: '新しいメッセージが投稿されました'
         # @groupがgroup_idを持っているため引数は@group
         respond_to do |format|
           format.html{redirect_to group_messages_path(@group)}
           format.json
+
      end
    else
     render :index
