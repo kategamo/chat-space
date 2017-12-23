@@ -12,10 +12,9 @@
         -@group.users.each do |user|
           = user.name
 
-
   .right__chat
     -@group.messages.each do |message|
-      .right__chat__chatsample1
+      .right__chat__chatsample1{'data-message-id': "#{message.id}"}
         .right__chat__chatsample1__user
           =message.user.name
           =message.created_at
@@ -23,6 +22,7 @@
           =message.body
           =image_tag message.image.url if message.image.present?
       / carriwwave image upload, user can send either image or message only
+  }
   .right__empty
   .right__type
     = form_for [@group, @message] do |f|
